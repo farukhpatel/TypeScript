@@ -12,13 +12,13 @@ interface IUser {
 }
 
 //for posts
-const fetchPosts = async (path: string): Promise<IPost> => {
+const fetchPosts = async (path: string): Promise<IPost[]> => {
   const response = await fetch(`${baseURL}${path}`);
   return response.json();
 };
 
 //for users
-const fetchUsers = async (path: string): Promise<IUser> => {
+const fetchUsers = async (path: string): Promise<IUser[]> => {
   const response = await fetch(`${baseURL}${path}`);
   return response.json();
 };
@@ -32,5 +32,6 @@ const fetchBoth = async <responseType>(path: string): Promise<responseType> => {
 (async () => {
   const posts = await fetchPosts("post/");
   const user = await fetchUsers("user/");
-  const postsFromBoth = await fetchBoth<IPost>("post/");
+  const postsFromBoth = await fetchBoth<IPost[]>("post/");
+//   postsFromBoth[0].id;
 })();
