@@ -72,3 +72,14 @@
 //     rollNumber:NaN,
 // }
 
+//Mergin in typeScript it happens only in interface not in type
+interface Book{
+    bookName:string;
+}
+interface Book{
+    bookSize:number;
+}
+const book:Book={
+    bookName:'',
+    bookSize:NaN,
+}
