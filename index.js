@@ -16,7 +16,7 @@
 //   rollNumber:NaN,
 // }
 // studentObj.firstname;
-//logPoint 
+//logPoint
 // interface Point{
 //   x:number;
 //   y:number;
@@ -39,7 +39,9 @@
 //declare a fuction in typeScript
 // declare function logDirection(dir:'left'|'right');
 function logDirection(dir) {
-    if (dir === void 0) { dir = 'left'; }
-    console.log("direction", dir);
+  if (dir === void 0) {
+    dir = "left";
+  }
+  console.log("direction", dir);
 }
 logDirection();

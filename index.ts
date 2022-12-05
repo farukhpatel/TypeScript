@@ -59,3 +59,16 @@
 // }
 // logBoolean();
 
+// interface Person {
+//     firstName:string;
+//     lastName:string;
+// }
+// interface Student extends Person{
+//     rollNumber:number;
+// }
+// const std:Student={
+//     firstName:'',
+//     lastName:'',
+//     rollNumber:NaN,
+// }
+
