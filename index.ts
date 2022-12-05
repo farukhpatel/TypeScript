@@ -83,15 +83,19 @@
 //     bookName:'',
 //     bookSize:NaN,
 // }
-// interface HasAge{
-//     age:number;
-// }
-// const people:HasAge[] = [
-//     {age:10},
-//     {age:11},
-//     {age:08},
-// ];
+interface HasAge{
+    age:number;
+}
+const people:HasAge[] = [
+    {age:10},
+    {age:11},
+    {age:08},
+];
+//widthout generics
 // function getOld(arr:HasAge[]):HasAge{
+//     return arr.sort((a,b)=>a.age - b.age)[0];
+// }
+// function getOld<T extends HasAge>(arr:T[]):T{
 //     return arr.sort((a,b)=>a.age - b.age)[0];
 // }
 // getOld(people).age;
@@ -105,6 +109,9 @@
 //     {name:'farukh2',age:20},
 // ];
 // const oldPlayer=getOld(players);
-// oldPlayer.name; // can't access name property
+// // oldPlayer.name; // can't access name property
+// //Assertion
 // const oldPlayer2=getOld(players) as Player;
 // oldPlayer2.name; // now we can access name proprty because we changed the type
+// //without assertion with generics
+// const oldPlayer3 = getOld(players);
