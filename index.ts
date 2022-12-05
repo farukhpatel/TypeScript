@@ -73,13 +73,38 @@
 // }
 
 //Mergin in typeScript it happens only in interface not in type
-interface Book{
-    bookName:string;
-}
-interface Book{
-    bookSize:number;
-}
-const book:Book={
-    bookName:'',
-    bookSize:NaN,
-}
+// interface Book{
+//     bookName:string;
+// }
+// interface Book{
+//     bookSize:number;
+// }
+// const book:Book={
+//     bookName:'',
+//     bookSize:NaN,
+// }
+// interface HasAge{
+//     age:number;
+// }
+// const people:HasAge[] = [
+//     {age:10},
+//     {age:11},
+//     {age:08},
+// ];
+// function getOld(arr:HasAge[]):HasAge{
+//     return arr.sort((a,b)=>a.age - b.age)[0];
+// }
+// getOld(people).age;
+// interface Player{
+//     name:string;
+//     age:number;
+// }
+// const players:Player[]=[
+//     {name:'farukh',age:22},
+//     {name:'farukh1',age:21},
+//     {name:'farukh2',age:20},
+// ];
+// const oldPlayer=getOld(players);
+// oldPlayer.name; // can't access name property
+// const oldPlayer2=getOld(players) as Player;
+// oldPlayer2.name; // now we can access name proprty because we changed the type
